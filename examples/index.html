@@ -23,12 +23,12 @@
 </head>
 <body unselectable="on" style="-moz-user-select: none; -webkit-user-select: none; user-select: none">
 
-    <script src="pixi.js"></script>
-    <script src="pixi.ninepatch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.11/pixi.min.js"></script>
+    <script src="../pixi.ninepatch.js"></script>
 
     <script>
 
-    var stage = new PIXI.Stage( 0xffffff );
+    var stage = new PIXI.Container( 0xffffff );
     var renderer = PIXI.autoDetectRenderer( 400, 400 );
     document.body.appendChild(renderer.view);
 
@@ -38,6 +38,8 @@
         ninepatch.y = 10;
 
     stage.addChild(ninepatch);
+	
+	stage.interactive = true;
 
     stage.click = stage.tap = function() 
     {

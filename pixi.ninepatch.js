@@ -42,7 +42,7 @@
     PIXI.NinePatch = function( width, height, image, useFrames, scaleMode )
     {
 
-        PIXI.DisplayObjectContainer.call(this);
+        PIXI.Container.call(this);
 
         this.scaleMode = scaleMode || PIXI.NinePatch.scaleModes.NINEPATCH;
         
@@ -96,7 +96,7 @@
     };
 
     // constructor
-    PIXI.NinePatch.prototype = Object.create( PIXI.DisplayObjectContainer.prototype );
+    PIXI.NinePatch.prototype = Object.create( PIXI.Container.prototype );
     PIXI.NinePatch.prototype.constructor = PIXI.NinePatch;
 
     // NinePatch scale modes.
